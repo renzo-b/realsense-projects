@@ -17,7 +17,7 @@ class CaptureManager:
             image = self.camera.capture_images()
 
             if self.analysis:
-                self.analysis.apply(image)
+                self.analysis.apply(image.copy())
 
             self.set_frame(image)
             self.show_frame()
